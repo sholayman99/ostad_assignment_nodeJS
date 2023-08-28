@@ -1,10 +1,12 @@
 /**
  * Author: Md Sholayman
+ 
  * Description : The is the root folder for a nodeJS project where a server in running on
    port 3000 and inside the server there is some route .If we go on those routes we will see 
    different page with different output.
+
  * Date:28 August,2023.
- */
+ **/
 
 //importing core modules ===>(requirement-1)
 const http = require("http"); 
@@ -12,7 +14,7 @@ const fs = require('fs');
 
 
 
-//creating the server
+//creating the server ===>(requirement-2)
 
 const server = http.createServer((req,res)=>{
 
@@ -61,7 +63,7 @@ const server = http.createServer((req,res)=>{
 );
 
 
-//listening to the server and consoling it===>(requirement-2,3,4)
+//listening to the server and consoling it===>(requirement-3,4)
 
 server.listen(3000,()=>{
     console.log("Listening on port 3000");
