@@ -40,11 +40,13 @@ const server = http.createServer((req,res)=>{
 
             if(err){
                 console.log(err);
+                res.writeHead(400,{"Content-Type":"text/html"});
                 res.write("Failed to write");
                 res.end();
             }
             
             else{
+                res.writeHead(200,{"Content-Type":"text/html"}); 
                 res.write("File Written Successfully.");
                 res.end();
             }
@@ -52,9 +54,11 @@ const server = http.createServer((req,res)=>{
         });
     }
    
-    
 
-});
+
+}
+
+);
 
 
 //listening to the server and consoling it===>(requirement-2,3,4)
